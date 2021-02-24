@@ -1,0 +1,20 @@
+{
+  "name": "laboratorio-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "dependencies": {
+    "webpack": "^5.24.2",
+    "wepack-cli": "0.0.1-security"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Pablo Méndez",
+  "license": "ISC"
+}
