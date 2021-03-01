@@ -26,6 +26,17 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /\.mp3$/i,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        esModule: false,
+                        name: "[name]-[hash].[ext]",
+                        outputPath: "audio",
+                    }
+                }
+            },
         ]
     },
 
