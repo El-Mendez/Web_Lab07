@@ -1,40 +1,42 @@
 import {destinations} from "./destinations.js"
 import {brandName} from "./constants";
+import '../../../node_modules/bootstrap/dist/js/bootstrap.js';
 
 export function implementNavigationBar(nav) {
 
-    const container = document.createElement("div");
-    container.classList.add("container-fluid");
+    const controllerId = "navBarContent";
 
     const brandItem = document.createElement("a");
     brandItem.classList.add("navbar-brand");
     brandItem.href = "index.html";
     brandItem.innerText = brandName;
-    container.appendChild(brandItem);
+    nav.appendChild(brandItem);
 
-    /*
+
     const toggler = document.createElement("button");
-    toggler.class = "navbar-toggler";
+    toggler.classList.add("navbar-toggler");
     toggler.type = "button";
-    // Todo implementar todo lo del toggle que no tengo idea de cómo hacerlo con JS
-    //<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    toggler.setAttribute("data-toggle", "collapse");
+    toggler.setAttribute("data-target", "#"+controllerId);
+    toggler.setAttribute("aria-controls", controllerId);
+    toggler.setAttribute("aria-expanded", "false");
+    toggler.setAttribute("aria-label", "Toggle Navigation");
+
     const togglerIcon = document.createElement("span");
-    togglerIcon.class = "navbar-toggler-icon";
+    togglerIcon.classList.add("navbar-toggler-icon");
     toggler.appendChild(togglerIcon);
-    toggler.appendChild(container);
-     */
+    nav.appendChild(toggler);
+
 
     const elementsListContainer = document.createElement("div");
     elementsListContainer.classList.add("collapse", "navbar-collapse");
-    elementsListContainer.id = "navbarNav";
-    container.appendChild(elementsListContainer);
+    elementsListContainer.id = controllerId;
+    nav.appendChild(elementsListContainer);
 
     const elementList = document.createElement("ul");
     elementList.classList.add("navbar-nav");
     createDestinations(elementList);
     elementsListContainer.appendChild(elementList);
-
-    nav.appendChild(container);
 }
 
 function createDestinations(destinationList) {

@@ -1,3 +1,5 @@
+import '../../../node_modules/bootstrap/dist/js/bootstrap.js';
+// TODO asegurarme de que importé todo bien :(
 /*
     Los atributos de elementos representan:
         -src: Dirección a la imagen
@@ -7,6 +9,11 @@
         -text (opcional): El texto que va a estar sobre la imagen.
  */
 export function implementCarousel(carousel, elements){
+
+    const customID = "customCarouselID";
+    const customReference = "#" + customID;
+    carousel.id = customID;
+
     const itemContainer = document.createElement("div");
     itemContainer.classList.add("carousel-inner");
 
@@ -44,20 +51,32 @@ export function implementCarousel(carousel, elements){
         itemContainer.appendChild(item);
     })
 
+    // Hago el botón para volver de imagen.
+    const previousButton = document.createElement("button");
+    previousButton.classList.add("carousel-control-prev");
+    previousButton.type = "button";
+    previousButton.setAttribute("data-bs-target", customReference);
+    previousButton.setAttribute("data-bs-slide", "prev");
+
+    const previousSymbol = document.createElement("span");
+    previousSymbol.classList.add("carousel-control-prev-icon");
+    previousSymbol.setAttribute("aria-hidden", "true");
+    previousButton.appendChild(previousSymbol);
+
+
+    // Hago el botón para cambiar de imagen.
+    const nextButton = document.createElement("button");
+    nextButton.classList.add("carousel-control-next");
+    nextButton.type = "button";
+    nextButton.setAttribute("data-bs-target", customReference);
+    nextButton.setAttribute("data-bs-slide", "next");
+
+    const nextSymbol = document.createElement("span");
+    nextSymbol.classList.add("carousel-control-next-icon");
+    nextSymbol.setAttribute("aria-hidden", "true");
+    nextButton.appendChild(nextSymbol);
+
     carousel.appendChild(itemContainer);
+    carousel.appendChild(previousButton);
+    carousel.appendChild(nextButton);
 }
-
-
-
-
-/*
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="../src/assets/img/Gato%20con%20Lentes.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="../src/assets/img/Gato%20con%20Lentes.jpg" alt="Second slide">
-        </div>
-
-    </div>
- */
