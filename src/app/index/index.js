@@ -1,3 +1,5 @@
 import "./main.scss"
+import {implementNavigationBar} from "../utils/navigation";
 
-alert("Este es el index");
+const navigationBar = document.getElementById("navigationBar");
+implementNavigationBar(navigationBar);
