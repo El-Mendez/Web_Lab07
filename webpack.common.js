@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: {
         index: "./src/app/index/index.js",
+        about: "./src/app/aboutMe/aboutMe.js",
     },
 
     plugins: [
@@ -10,6 +11,11 @@ module.exports = {
             template: "./src/app/index/index.html",
             filename: "index.html",
             chunks: ["index"],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/app/aboutMe/aboutMe.html",
+            filename: "aboutMe.html",
+            chunks: ["about"],
         }),
     ],
 

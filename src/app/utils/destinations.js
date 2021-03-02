@@ -5,7 +5,7 @@ export const destinations = [
     },
     {
         name: "About Me",
-        reference: "#",
+        reference: "aboutMe.html",
     },
     {
         name: "Libros Favoritos",

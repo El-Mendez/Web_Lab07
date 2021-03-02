@@ -1,4 +1,4 @@
-import '../../../node_modules/bootstrap/dist/js/bootstrap.js';
+import '../../../node_modules/bootstrap/dist/js/bootstrap.min';
 // TODO asegurarme de que importé todo bien :(
 /*
     Los atributos de elementos representan:
