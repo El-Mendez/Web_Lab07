@@ -35,7 +35,7 @@ export function implementFooter(footer) {
     container.appendChild(bootstrap);
 
     const division = document.createElement("hr");
-    division.classList.add("light", "col-12");
+    division.classList.add("light", "col-11");
     container.appendChild(division);
     const copyRight = document.createElement("p");
     copyRight.classList.add("text-center", "col-12");
