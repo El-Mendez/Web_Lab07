@@ -1,5 +1,6 @@
 import '../../../node_modules/bootstrap/dist/js/bootstrap.min';
 // TODO asegurarme de que importé todo bien :(
+// TODO Asegurarme que las imagenes estén en el centro vertical de carrusel
 /*
     Los atributos de elementos representan:
         -src: Dirección a la imagen
@@ -39,6 +40,9 @@ export function implementCarousel(carousel, elements){
         if (element.header){
             const header = document.createElement("h2");
             header.innerText = element.header;
+            if (element.dark){
+                header.classList.add("text-dark")
+            }
             captionContainer.appendChild(header);
         }
 
@@ -46,6 +50,9 @@ export function implementCarousel(carousel, elements){
             const text = document.createElement("p");
             text.innerText = element.text;
             captionContainer.appendChild(text);
+            if (element.dark){
+                text.classList.add("text-dark")
+            }
         }
 
         itemContainer.appendChild(item);

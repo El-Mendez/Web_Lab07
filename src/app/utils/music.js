@@ -13,6 +13,7 @@ import song from "../../assets/audio/purple_vision.mp3";
     if (typeof (Storage) !== "undefined"){
         music.currentTime = localStorage.playTime;
     }
+    music.volume = 0.2;
 
     window.onbeforeunload = function (){
         localStorage.playTime = music.currentTime;
