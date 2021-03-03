@@ -1,6 +1,7 @@
 import {destinations} from "./destinations.js"
 import {brandName} from "./constants";
-import Popover from "bootstrap/js/src/popover";"bootstrap/dist/js/bootstrap";
+import Popover from "bootstrap/js/src/popover";
+import "bootstrap/dist/js/bootstrap";
 
 export function implementNavigationBar(nav, current) {
 

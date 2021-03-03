@@ -12,7 +12,9 @@ import song from "../../assets/audio/purple_vision.mp3";
     music.appendChild(source);
 
     if (typeof (Storage) !== "undefined"){
+       try {
         music.currentTime = localStorage.playTime;
+       } catch (e) {}
     }
     music.volume = 0.4;
 
