@@ -6,5 +6,5 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 setMusicPlayer();
 const navigationBar = document.getElementById("navigationBar");
-implementNavigationBar(navigationBar);
+implementNavigationBar(navigationBar, "libros.html");
 implementFooter();

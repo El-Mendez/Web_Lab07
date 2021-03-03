@@ -1,4 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.css";
+@import "~animate.css/source/fading_entrances/fadeInDown.css";
 nav {
   margin-bottom: 20px;
 }
@@ -13,4 +15,8 @@ p {
 
 h1 {
   font-size: 2em;
+}
+
+.jumbotron p {
+  font-size: 24px;
 }

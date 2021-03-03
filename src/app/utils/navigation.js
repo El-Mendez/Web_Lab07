@@ -2,7 +2,7 @@ import {destinations} from "./destinations.js"
 import {brandName} from "./constants";
 import Popover from "bootstrap/js/src/popover";"bootstrap/dist/js/bootstrap";
 
-export function implementNavigationBar(nav) {
+export function implementNavigationBar(nav, current) {
 
     const controllerId = "navBarContent";
 
@@ -35,7 +35,7 @@ export function implementNavigationBar(nav) {
 
     const elementList = document.createElement("ul");
     elementList.classList.add("navbar-nav");
-    createDestinations(elementList);
+    createDestinations(elementList, current);
     elementsListContainer.appendChild(elementList);
 
     const muteButton = document.createElement("a");
@@ -57,7 +57,7 @@ export function implementNavigationBar(nav) {
     })
 }
 
-function createDestinations(destinationList) {
+function createDestinations(destinationList, current) {
     for(let i = 0; i < destinations.length; i++) {
         const destination = destinations[i];
 
@@ -66,6 +66,9 @@ function createDestinations(destinationList) {
 
         let reference = document.createElement("a");
         reference.classList.add("nav-link");
+        if (destination.reference === current){
+            reference.classList.add("active");
+        }
         reference.innerText = destination.name;
         reference.href = destination.reference;
 
