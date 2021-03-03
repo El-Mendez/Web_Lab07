@@ -1,5 +1,3 @@
-// TODO asegurarme de que importé todo bien :(
-// TODO Asegurarme que las imagenes estén en el centro vertical de carrusel
 /*
     Los atributos de elementos representan:
         -src: Dirección a la imagen

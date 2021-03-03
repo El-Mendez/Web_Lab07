@@ -3,7 +3,7 @@ import song from "../../assets/audio/purple_vision.mp3";
  export function setMusicPlayer() {
     const music = document.createElement("audio");
     music.setAttribute("autoplay", "");
-    music.setAttribute("controls", "");
+    // music.setAttribute("controls", "");
     music.setAttribute("loop", "");
 
     const source = document.createElement("source");
