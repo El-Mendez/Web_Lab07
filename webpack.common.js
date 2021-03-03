@@ -5,6 +5,7 @@ module.exports = {
         index: "./src/app/index/index.js",
         about: "./src/app/aboutMe/aboutMe.js",
         identificame: "./src/app/identificame/identificame.js",
+        libros: "./src/app/libros/libros.js",
     },
 
     plugins: [
@@ -22,6 +23,11 @@ module.exports = {
             template: "./src/app/identificame/identificame.html",
             filename: "identificame.html",
             chunks: ["identificame"],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/app/libros/libros.html",
+            filename: "libros.html",
+            chunks: ["libros"],
         }),
     ],
 

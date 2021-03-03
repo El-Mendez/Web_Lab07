@@ -9,7 +9,7 @@ export const destinations = [
     },
     {
         name: "Libros Favoritos",
-        reference: "#",
+        reference: "libros.html",
     },
     {
         name: "Sitios Web favoritos",
