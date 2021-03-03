@@ -1,5 +1,6 @@
 import {destinations} from "./destinations.js"
 import {brandName} from "./constants";
+import Popover from "bootstrap/js/src/popover";"bootstrap/dist/js/bootstrap";
 
 export function implementNavigationBar(nav) {
 
@@ -15,8 +16,8 @@ export function implementNavigationBar(nav) {
     const toggler = document.createElement("button");
     toggler.classList.add("navbar-toggler");
     toggler.type = "button";
-    toggler.setAttribute("data-toggle", "collapse");
-    toggler.setAttribute("data-target", "#"+controllerId);
+    toggler.setAttribute("data-bs-toggle", "collapse");
+    toggler.setAttribute("data-bs-target", "#"+controllerId);
     toggler.setAttribute("aria-controls", controllerId);
     toggler.setAttribute("aria-expanded", "false");
     toggler.setAttribute("aria-label", "Toggle Navigation");
@@ -36,6 +37,24 @@ export function implementNavigationBar(nav) {
     elementList.classList.add("navbar-nav");
     createDestinations(elementList);
     elementsListContainer.appendChild(elementList);
+
+    const muteButton = document.createElement("a");
+    muteButton.tabIndex = "0";
+    muteButton.classList.add("btn", "btn-lg", "btn-danger")
+    muteButton.role = "button";
+    muteButton.setAttribute("data-bs-toggle", "popover");
+    muteButton.setAttribute("data-bs-trigger", "focus");
+    muteButton.setAttribute("data-bs-content", "No puedes mutearme >:D");
+    elementsListContainer.appendChild(muteButton);
+    muteButton.innerText = "mute";
+
+
+
+    // Para que el botón de mute funcione
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new Popover(popoverTriggerEl)
+    })
 }
 
 function createDestinations(destinationList) {

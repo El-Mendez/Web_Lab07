@@ -4,6 +4,7 @@ import song from "../../assets/audio/purple_vision.mp3";
     const music = document.createElement("audio");
     music.setAttribute("autoplay", "");
     music.setAttribute("controls", "");
+    music.setAttribute("loop", "");
 
     const source = document.createElement("source");
     source.src = song;
@@ -13,7 +14,7 @@ import song from "../../assets/audio/purple_vision.mp3";
     if (typeof (Storage) !== "undefined"){
         music.currentTime = localStorage.playTime;
     }
-    music.volume = 0.2;
+    music.volume = 0.4;
 
     window.onbeforeunload = function (){
         localStorage.playTime = music.currentTime;
