@@ -12,7 +12,7 @@
     "wepack-cli": "0.0.1-security"
   },
   "devDependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.0-beta2",
     "css-loader": "^5.0.2",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.1",
