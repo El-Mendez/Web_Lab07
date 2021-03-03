@@ -1,4 +1,3 @@
-import "bootstrap/js/dist/carousel";
 // TODO asegurarme de que importé todo bien :(
 // TODO Asegurarme que las imagenes estén en el centro vertical de carrusel
 /*

@@ -1,8 +1,10 @@
+
 import "./identificame.scss"
 import {implementNavigationBar} from "../utils/navigation";
 import {implementFooter} from "../utils/footer";
 import {setMusicPlayer} from "../utils/music";
 import {implementCarousel} from "../utils/carousel";
+import 'bootstrap/dist/js/bootstrap.js'
 
 // Imagenes para el carrusel
 import gato from "../../assets/img/Gato con Lentes.jpg";

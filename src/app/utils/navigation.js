@@ -1,6 +1,5 @@
 import {destinations} from "./destinations.js"
 import {brandName} from "./constants";
-import '../../../node_modules/bootstrap/dist/js/bootstrap.min';
 
 export function implementNavigationBar(nav) {
 
