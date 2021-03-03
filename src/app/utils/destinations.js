@@ -13,6 +13,6 @@ export const destinations = [
     },
     {
         name: "Sitios Web favoritos",
-        reference: "#",
+        reference: "sitiosWeb.html",
     }
 ]
