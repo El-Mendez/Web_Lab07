@@ -13,6 +13,8 @@
     "wepack-cli": "0.0.1-security"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
     "bootstrap": "^5.0.0-beta2",
     "css-loader": "^5.0.2",
     "file-loader": "^6.2.0",
@@ -29,7 +31,8 @@
   },
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "translate": "babel src/app/utils/navigation.js -o src/translated/navigation-translated.js"
   },
   "keywords": [],
   "author": "Pablo Méndez",
