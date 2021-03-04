@@ -13,16 +13,16 @@ var _popover = _interopRequireDefault(require("bootstrap/js/src/popover"));
 
 require("bootstrap/dist/js/bootstrap");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function implementNavigationBar(nav, current) {
-  var controllerId = "navBarContent";
-  var brandItem = document.createElement("a");
+  const controllerId = "navBarContent";
+  const brandItem = document.createElement("a");
   brandItem.classList.add("navbar-brand");
   brandItem.href = "index.html";
   brandItem.innerText = _constants.brandName;
   nav.appendChild(brandItem);
-  var toggler = document.createElement("button");
+  const toggler = document.createElement("button");
   toggler.classList.add("navbar-toggler");
   toggler.type = "button";
   toggler.setAttribute("data-bs-toggle", "collapse");
@@ -30,19 +30,19 @@ function implementNavigationBar(nav, current) {
   toggler.setAttribute("aria-controls", controllerId);
   toggler.setAttribute("aria-expanded", "false");
   toggler.setAttribute("aria-label", "Toggle Navigation");
-  var togglerIcon = document.createElement("span");
+  const togglerIcon = document.createElement("span");
   togglerIcon.classList.add("navbar-toggler-icon");
   toggler.appendChild(togglerIcon);
   nav.appendChild(toggler);
-  var elementsListContainer = document.createElement("div");
+  const elementsListContainer = document.createElement("div");
   elementsListContainer.classList.add("collapse", "navbar-collapse");
   elementsListContainer.id = controllerId;
   nav.appendChild(elementsListContainer);
-  var elementList = document.createElement("ul");
+  const elementList = document.createElement("ul");
   elementList.classList.add("navbar-nav");
   createDestinations(elementList, current);
   elementsListContainer.appendChild(elementList);
-  var muteButton = document.createElement("a");
+  const muteButton = document.createElement("a");
   muteButton.tabIndex = "0";
   muteButton.classList.add("btn", "btn-lg", "btn-danger");
   muteButton.role = "button";
@@ -52,18 +52,20 @@ function implementNavigationBar(nav, current) {
   elementsListContainer.appendChild(muteButton);
   muteButton.innerText = "mute"; // Para que el botón de mute funcione
 
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new _popover["default"](popoverTriggerEl);
-  });
+  const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new _popover.default(popoverTriggerEl);
+  }); // Esto es solo para probar si los pollyfills funcionan
+
+  "   Cómo le va Ludwing? xd".trimStart();
 }
 
 function createDestinations(destinationList, current) {
-  for (var i = 0; i < _destinations.destinations.length; i++) {
-    var destination = _destinations.destinations[i];
-    var element = document.createElement("li");
+  for (let i = 0; i < _destinations.destinations.length; i++) {
+    const destination = _destinations.destinations[i];
+    let element = document.createElement("li");
     element.classList.add("nav-item");
-    var reference = document.createElement("a");
+    let reference = document.createElement("a");
     reference.classList.add("nav-link");
 
     if (destination.reference === current) {

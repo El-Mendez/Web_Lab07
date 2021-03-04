@@ -49,13 +49,14 @@ export function implementNavigationBar(nav, current) {
     elementsListContainer.appendChild(muteButton);
     muteButton.innerText = "mute";
 
-
-
     // Para que el botón de mute funcione
     const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new Popover(popoverTriggerEl)
     })
+
+    // Esto es solo para probar si los pollyfills funcionan
+    "   Cómo le va Ludwing? xd".trimStart();
 }
 
 function createDestinations(destinationList, current) {
