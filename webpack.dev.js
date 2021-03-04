@@ -17,6 +17,11 @@ module.exports = merge(common,{
                 test: /\.s[ac]ss$/,
                 use: ["style-loader", "css-loader", "sass-loader"],
             },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: "babel-loader",
+            },
         ]
     }
 
