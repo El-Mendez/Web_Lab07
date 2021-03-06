@@ -9,5 +9,11 @@
         "targets": "> 0.25%, not dead, not ie 11"
       }
     ]
+  ],
+
+  "plugins": [
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-template-literals",
+    "@babel/plugin-transform-instanceof"
   ]
 }

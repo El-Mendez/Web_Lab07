@@ -54,9 +54,6 @@ export function implementNavigationBar(nav, current) {
     const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new Popover(popoverTriggerEl)
     })
-
-    // Esto es solo para probar si los pollyfills funcionan
-    "   Cómo le va Ludwing? xd".trimStart();
 }
 
 function createDestinations(destinationList, current) {
